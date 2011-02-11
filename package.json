@@ -3,7 +3,7 @@
     "license": "MPL 1.1/GPL 2.0/LGPL 2.1", 
     "author": "Patrick Walton", 
     "version": "0.1", 
-    "fullName": "Firefox Memory Meter", 
+    "fullName": "Memory Meter", 
     "id": "jid0-rPVfV5hsOVtkmfHWDnYqpd1QC9k", 
     "description": "Displays a small graph of available memory in the Add-On Bar."
 }
