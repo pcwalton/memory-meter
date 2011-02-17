@@ -20,7 +20,7 @@ function redraw() {
     let ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, width, height);
 
-    let gcOverlay = 0;
+    let gcSize = 0;
 
     let graphHeight = height - GC_BAR_HEIGHT - 1;
 
@@ -38,12 +38,12 @@ function redraw() {
         ctx.fillRect(i, height - js, 1, js);
 
         if (sample.gc)
-            gcOverlay = 1;
+            gcSize = GC_BAR_HEIGHT;
 
-        if (gcOverlay > 0.1) {
-            ctx.fillStyle = "rgba(144, 94, 190, " + gcOverlay + ")";
-            ctx.fillRect(i, 0, 1, GC_BAR_HEIGHT);
-            gcOverlay -= 1/3;
+        if (gcSize > 0) {
+            ctx.fillStyle = "rgb(144, 94, 190)";
+            ctx.fillRect(i, 0, 1, gcSize);
+            gcSize--;
         }
     }
 }
