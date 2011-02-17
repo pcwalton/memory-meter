@@ -5,7 +5,7 @@
  *  Patrick Walton <pcwalton@mimiga.net>
  */
 
-const GC_BAR_HEIGHT = 3;
+const GC_BAR_HEIGHT = 2;
 
 let samples = [];
 let max = 0;
@@ -22,7 +22,7 @@ function redraw() {
 
     let gcOverlay = 0;
 
-    let graphHeight = height - GC_BAR_HEIGHT;
+    let graphHeight = height - GC_BAR_HEIGHT - 1;
 
     for (let i = 0; i < width; i++) {
         let sample = samples[i];
