@@ -58,8 +58,8 @@ on('message', function(data) {
     }
 
     let sample = {
-        alloc: data['heap-used'],
-        js: data['explicit/js/gc-heap'],
+        alloc: data['heap-used'] || data['malloc/allocated'] || data['resident'],
+        js: data['explicit/js/gc-heap'] || data['js/gc-heap'] || data['js-gc-heap'],
         gc: gcOccurred
     };
     samples.push(sample);
